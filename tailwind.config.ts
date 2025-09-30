@@ -24,10 +24,6 @@ export default {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
-        // primary: {
-        //   DEFAULT: "hsl(var(--primary))",
-        //   foreground: "hsl(var(--primary-foreground))",
-        // },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -108,6 +104,10 @@ export default {
       },
       backgroundImage: {
         pattern: "url('/images/pattern.webp')",
+      },
+      // 👇 این بخش جدید اضافه شد
+      minHeight: {
+        14: "3.5rem", // حالا می‌تونی از min-h-14 استفاده کنی
       },
     },
   },

@@ -36,7 +36,7 @@ const BookOverview = ({ title, author, genre, rating, total_copies, available_co
                 <p className='book-description'>{description}</p>
 
 
-                <Button className='book-overivew_btn'>
+                <Button className='book-overview_btn'>
 
                     <Image src='/icons/book.svg' alt='book' width={20} height={20} />
 
@@ -45,11 +45,11 @@ const BookOverview = ({ title, author, genre, rating, total_copies, available_co
                 </Button>
             </div>
 
-            <div className='relative flex-1 left-20 justify-center'>
+            <div className='relative flex-1 justify-center sm:justify-center left-0 ml-20'>
                 <BookCover
 
                     variant='wide'
-                    classsName='z-10'
+                    className='z-10'
                     coverColor={color}
                     coverImage={cover}
                 />
