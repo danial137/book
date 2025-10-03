@@ -1,0 +1,37 @@
+import { ReactNode } from "react";
+import Image from "next/image";
+import { redirect } from "next/navigation";
+
+const Layout = async ({ children }: { children: ReactNode }) => {
+    // const session = await auth();
+
+    // if (session) redirect("/");
+
+    return (
+        <main className="auth-container flex h-screen">
+
+            <section className="auth-form flex-1 flex items-center justify-center">
+                <div className="auth-box">
+                    <div className="flex flex-row gap-3 mb-6">
+                        <Image src="/icons/logo.svg" alt="logo" width={37} height={37} />
+                        <h1 className="text-2xl font-semibold text-white">BookWise</h1>
+                    </div>
+                    <div>{children}</div>
+                </div>
+            </section>
+
+
+            <section className="auth-illustration relative flex-1 h-full">
+                <Image
+                    src="/images/auth-illustration.png"
+                    alt="auth illustration"
+                    fill
+                    className="object-cover"
+                    priority
+                />
+            </section>
+        </main>
+    );
+};
+
+export default Layout;
