@@ -28,7 +28,7 @@ import { useRouter } from "next/navigation"
 
 interface Props<T extends FieldValues> {
     schema: z.ZodSchema<T> // 👈 اصلاح شد
-    defaultValues: DefaultValues<T> // 👈 اصلاح شد
+    defaultValues: DefaultValues<T> // 👈 اصلاح شد 
     onSubmit: (data: T) => Promise<{ success: boolean; error?: string }>
     type: "SIGN_IN" | "SIGN_UP"
 }
@@ -42,7 +42,7 @@ const AuthForm = <T extends FieldValues>({
     const router = useRouter()
     const isSignIn = type === "SIGN_IN"
 
-    // ❌ دیگه UseFormReturn<T> لازم نیست
+
     const form = useForm<T>({
         resolver: zodResolver(schema),
         defaultValues,
@@ -69,7 +69,7 @@ const AuthForm = <T extends FieldValues>({
     }
 
     return (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 ">
             <h1 className="text-2xl font-semibold text-white">
                 {isSignIn ? "Welcome back to BookWise" : "Create your library account"}
             </h1>

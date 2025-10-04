@@ -8,9 +8,9 @@ const Layout = async ({ children }: { children: ReactNode }) => {
     // if (session) redirect("/");
 
     return (
-        <main className="auth-container flex h-screen">
+        <main className="auth-container flex h-screen w-full overflow-hidden">
 
-            <section className="auth-form flex-1 flex items-center justify-center">
+           <section className="auth-form flex-1 flex items-center justify-center py-2 px-6">
                 <div className="auth-box">
                     <div className="flex flex-row gap-3 mb-6">
                         <Image src="/icons/logo.svg" alt="logo" width={37} height={37} />
