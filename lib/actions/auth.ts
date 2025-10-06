@@ -1,18 +1,18 @@
 "use server";
 
-// import { eq } from "drizzle-orm";
-// import { db } from "@/database/drizzle";
-// import { users } from "@/database/schema";
-// import { hash } from "bcryptjs";
-// import { signIn } from "@/auth";
-// import { headers } from "next/headers";
-// import ratelimit from "@/lib/ratelimit";
-// import { redirect } from "next/navigation";
-// import { workflowClient } from "@/lib/workflow";
-// import config from "@/lib/config";
+import { eq } from "drizzle-orm";
+import { db } from "@/database/drizzle";
+import { users } from "@/database/schema";
+import { hash } from "bcryptjs";
+import { signIn } from "@/auth";
+import { headers } from "next/headers";
+import ratelimit from "@/lib/ratelimit";
+import { redirect } from "next/navigation";
+import { workflowClient } from "@/lib/workflow";
+import config from "@/lib/config";
 
 export const signInWithCredentials = async (
-  params: Pick<AuthCredentials, "email" | "password">
+  params: Pick<AuthCredentials, "email" | "password">,
 ) => {
   const { email, password } = params;
 
