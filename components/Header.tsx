@@ -30,6 +30,9 @@ const Header = () => {
             Library
           </Link>
         </li>
+        <li>
+          <Link href='/my-profile'></Link>
+        </li>
       </ul>
     </header>
   );
